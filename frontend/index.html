@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>Library Management System</h1>
+
+  <section>
+    <h2>Add a New Book</h2>
+    <form id="addBookForm">
+      <input type="text" id="title" placeholder="Title" required>
+      <input type="text" id="author" placeholder="Author" required>
+      <input type="text" id="genre" placeholder="Genre" required>
+      <input type="text" id="isbn" placeholder="ISBN" required>
+      <input type="date" id="publication_date" required>
+      <input type="number" id="available_copies" placeholder="Available Copies" required>
+      <button type="submit">Add Book</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Available Books</h2>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search books...">
+      <select id="searchType">
+        <option value="title">Title</option>
+        <option value="author">Author</option>
+        <option value="genre">Genre</option>
+      </select>
+    </div>
+    <div id="bookList"></div>
+  </section>
+
+  <section>
+    <h2>Manage Book</h2>
+    <form id="updateBookForm">
+      <input type="number" id="updateId" placeholder="Book ID" required>
+      <input type="number" id="updateCopies" placeholder="New Available Copies" required>
+      <button type="submit">Update Copies</button>
+    </form>
+
+    <form id="deleteBookForm">
+      <input type="number" id="deleteId" placeholder="Book ID to Delete" required>
+      <button type="submit">Delete Book</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
